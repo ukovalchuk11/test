@@ -2,10 +2,16 @@ package ru.test.list;
 
 public class Node<T> {
     private T value;
-    private Node<T> next;
+    public Node<T> next;
 
-    private Node(T value) {
+
+
+    public Node(T value) {
         this.value = value;
+    }
+
+    public Node() {
+
     }
 
     public T getValue() {
@@ -24,22 +30,28 @@ public class Node<T> {
         this.next = next;
     }
 
-    Node first = new Node<>(1);
-    Node two = new Node<>(2);
-    Node third = new Node<>(3);
-    Node four = new Node<>(4);
 
-    boolean hasCycle(Node first) {
+    public boolean hasCycle(Node first) {
         if (first == null) {
             return false;
         }
         Node slow = first;
         Node fast = first;
 
-        while (true){
+        while (true) {
+            slow = slow.next;
 
+            if (fast.next != null) {
+                fast = fast.next.next;
+            } else
+                return false;
+
+            if (slow == null || fast == null) {
+                return false;
+            }
+            if (slow == fast) {
+                return true;
+            }
         }
-
-
     }
 }
