@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 public class SimpleSetLinked<E> implements Iterable<E> {
 
-    private MyList<E> myList = new MyList<>();
+    private MyList<E> myList = new MyList<E>();
 
 
     public void add(E e) {

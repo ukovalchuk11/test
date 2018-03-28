@@ -28,6 +28,17 @@ public class ListDynamic<E> implements Iterable<E> {
 
     }
 
+    public boolean contain(E e) {
+        for (int i = 0; i < index; i++) {
+            while (container[i] != null) {
+                if (container[i].equals(e)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
