@@ -75,18 +75,6 @@ public class MyList<E> implements Iterable<E> {
         return element.getValue();
     }
 
-    public E removeFirst() {
-        Node<E> oldFirst = first;
-        first = first.next;
-        return oldFirst.value;
-    }
-
-    public void addFirst(E value) {
-        Node<E> firstElement = first;
-        Node<E> newFirst = new Node<E>(firstElement, value, null);
-        newFirst.next = first;
-        first = newFirst;
-    }
         @Override
         public Iterator<E> iterator() {
             return new Iterator<E>() {

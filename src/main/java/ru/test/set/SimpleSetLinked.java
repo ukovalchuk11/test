@@ -10,18 +10,19 @@ public class SimpleSetLinked<E> implements Iterable<E> {
 
     private MyList<E> myList = new MyList<E>();
 
-
     public void add(E e) {
-        boolean add = true;
-        for (E container : myList) {
-            if (container.equals(e)) {
-                add = false;
-                break;
-            }
-        }
-        if (add) {
+        if(!contain(e)) {
             myList.add(e);
         }
+    }
+
+    public boolean contain(E e) {
+        for (E container : myList) {
+            if (e != null && container.equals(e)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
