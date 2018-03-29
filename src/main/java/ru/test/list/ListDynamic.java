@@ -10,30 +10,26 @@ public class ListDynamic<E> implements Iterable<E> {
     private Object[] container = new Object[10];
 
     private int index = 0;
-
     private int modCount = 0;
 
-    public void add(E e){
-        if(container.length <= index){
-            container = Arrays.copyOf(container, index*2);
+
+    public void add(E e) {
+        if (container.length <= index) {
+            container = Arrays.copyOf(container, index * 2);
         }
         modCount++;
         container[index++] = e;
 
     }
 
-    public E get(int x){
-
+    public E get(int x) {
         return (E) this.container[x];
-
     }
 
     public boolean contain(E e) {
         for (int i = 0; i < index; i++) {
-            while (container[i] != null) {
-                if (container[i].equals(e)) {
-                    return true;
-                }
+            if (e != null && e.equals(container[i])) {
+                return true;
             }
         }
         return false;
@@ -54,14 +50,14 @@ public class ListDynamic<E> implements Iterable<E> {
             @Override
             public E next() {
                 count();
-                if(!hasNext()){
+                if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
                 return (E) container[x++];
             }
 
-            private void count(){
-                if(modCount < expectedModCount || modCount > expectedModCount){
+            private void count() {
+                if (modCount < expectedModCount || modCount > expectedModCount) {
                     throw new ConcurrentModificationException();
                 }
             }

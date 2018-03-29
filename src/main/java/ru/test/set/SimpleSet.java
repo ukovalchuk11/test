@@ -2,13 +2,11 @@ package ru.test.set;
 
 import ru.test.list.ListDynamic;
 
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Objects;
+
 
 public class SimpleSet<E> implements Iterable<E> {
-    
+
     private ListDynamic<E> listDynamic = new ListDynamic<E>();
 
 

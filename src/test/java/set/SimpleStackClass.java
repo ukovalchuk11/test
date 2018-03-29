@@ -24,14 +24,14 @@ public class SimpleStackClass {
 
     }
 
-    @Test
-    public void whenHasNexIntegerThenNextReturnIt() {
-        SimpleSet<Integer> set = new SimpleSet<>();
-        set.add(42);
-        set.add(93);
-        set.add(320);
-        Iterator<Integer> iterator = set.iterator();
-
+//    @Test
+//    public void whenHasNexIntegerThenNextReturnIt() {
+//        SimpleSet<Integer> set = new SimpleSet<>();
+//        set.add(42);
+//        set.add(93);
+//        set.add(320);
+//        Iterator<Integer> iterator = set.iterator();
+//
 //        assertThat(iterator.hasNext(), is(true));
 //        assertThat(iterator.next(), is(42));
 //        assertThat(iterator.hasNext(), is(true));
@@ -39,5 +39,5 @@ public class SimpleStackClass {
 //        assertThat(iterator.hasNext(), is(true));
 //        assertThat(iterator.next(), is(320));
 //        assertThat(iterator.hasNext(), is(false));
-    }
+//    }
 }
