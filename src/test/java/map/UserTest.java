@@ -18,7 +18,7 @@ public class UserTest {
         User user2 = new User("Petr", 30,new GregorianCalendar(2018,Calendar.APRIL,4));
         int hash1 = user1.hashCode();
         int hash2 = user2.hashCode();
-        Assert.assertThat(hash1 == hash2, Is.is(true));
+        Assert.assertEquals(hash1, hash2);
         map.put(user1,null);
         map.put(user2,null);
         System.out.println(map);
