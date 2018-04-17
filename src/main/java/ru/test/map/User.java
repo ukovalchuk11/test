@@ -4,9 +4,9 @@ import java.util.Calendar;
 import java.util.Objects;
 
 public class User {
-    private String name;
-    private int children;
-    private Calendar birthday;
+    private final String  name;
+    private final int children;
+    private final Calendar birthday;
 
     public User(String name, int children, Calendar birthday) {
         this.name = name;
