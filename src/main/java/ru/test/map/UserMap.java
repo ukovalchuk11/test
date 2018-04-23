@@ -35,11 +35,11 @@ public class UserMap {
         return name != null ? name.equals(userMap.name) : userMap.name == null;
     }
 
-//    @Override
-//    public int hashCode() {
-//        int result = id;
-//        result = 31 * result + (name != null ? name.hashCode() : 0);
-//        result = 31 * result + age;
-//        return result;
-//    }
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + age;
+        return result;
+    }
 }
