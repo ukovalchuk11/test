@@ -23,23 +23,23 @@ public class UserMap {
                 '}';
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        UserMap userMap = (UserMap) o;
-//
-//        if (id != userMap.id) return false;
-//        if (age != userMap.age) return false;
-//        return name != null ? name.equals(userMap.name) : userMap.name == null;
-//    }
-
     @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + age;
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UserMap userMap = (UserMap) o;
+
+        if (id != userMap.id) return false;
+        if (age != userMap.age) return false;
+        return name != null ? name.equals(userMap.name) : userMap.name == null;
     }
+
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (name != null ? name.hashCode() : 0);
+//        result = 31 * result + age;
+//        return result;
+//    }
 }

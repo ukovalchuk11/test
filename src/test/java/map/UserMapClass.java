@@ -26,4 +26,14 @@ public class UserMapClass {
         map.put(user4, new Object());
         System.out.println(map);
     }
+
+    @Test
+    public void showMapEquals(){
+        UserMap user5 = new UserMap(7,"Petr",15);
+        UserMap user6 = new UserMap(7,"Petr",15);
+        Map<UserMap,Object> map = new HashMap<>();
+        map.put(user5, new Object());
+        map.put(user6, new Object());
+        System.out.println(map);
+    }
 }
