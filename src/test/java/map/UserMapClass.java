@@ -16,4 +16,14 @@ public class UserMapClass {
         map.put(user2, new Object());
         System.out.println(map);
     }
+
+    @Test
+    public void showMapHashCode(){
+        UserMap user3 = new UserMap(10,"Petr",10);
+        UserMap user4 = new UserMap(10,"Petr",10);
+        Map<UserMap,Object> map = new HashMap<>();
+        map.put(user3, new Object());
+        map.put(user4, new Object());
+        System.out.println(map);
+    }
 }
